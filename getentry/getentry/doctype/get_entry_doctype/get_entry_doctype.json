@@ -1,25 +1,69 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{entry_number}-{####}",
  "creation": "2025-11-06 16:46:34.350128",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_eyw0"
+  "entry_number",
+  "date",
+  "time",
+  "vender",
+  "receiver",
+  "attachment",
+  "remark"
  ],
  "fields": [
   {
-   "fieldname": "section_break_eyw0",
-   "fieldtype": "Section Break"
+   "fieldname": "entry_number",
+   "fieldtype": "Select",
+   "label": "Entry Number",
+   "options": "24-25"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "fieldname": "vender",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vender"
+  },
+  {
+   "fieldname": "receiver",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Receiver "
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-06 16:46:34.350128",
+ "modified": "2025-11-06 17:09:13.604290",
  "modified_by": "Administrator",
  "module": "Getentry",
  "name": "Get Entry Doctype",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,5 +82,6 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
